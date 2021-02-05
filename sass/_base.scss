@@ -1,0 +1,174 @@
+// Color Assignments
+$layout-app-background-color: $brand-dark;
+$layout-footer-background-color: $brand-light;
+
+$text-color-primary: $brand-primary;
+$text-color-dark: $brand-dark;
+$text-color: $brand-light;
+$text-color-light: $text-light;
+
+// App
+$appWidth: 1200px;
+$contentWidth: 960px;
+
+// Spacings
+$baseSpacing: 6;
+
+// Text
+$textBiggest: ($baseSpacing*8) * 1px;
+$textBig: ($baseSpacing*4) * 1px;
+$textBase: 16px;
+$textBaseSmall: 14px;
+$textSmallest: ($baseSpacing*2) * 1px;
+
+// Transitions
+$navLinkHeight: 2px;
+$labelColor: $brand-light;
+$labelTransitionDuration: 0.4s;
+$labelEasing: cubic-bezier(0.33, 1, 0.68, 1);
+$imageOpacity: 0.6;
+$imageTransitionDuration: 0.6s;
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+    background-color: $layout-app-background-color;
+	position: relative;
+    height: 100%;
+}
+
+body {
+	color: $text-color;
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+// native elements
+
+p {
+    line-height: 1.4;
+}
+
+$containerWidth: 1200px;
+
+// Layout
+
+.app {
+	position: relative;
+	height: 100%;
+
+    
+    .heading {
+        font-size: $textBiggest;
+        font-weight: bold;
+        margin: 0 0 ($baseSpacing * 3px) 0;
+	}
+
+	.top-bar {
+        width: 100%;
+        background-color: $brand-dark;        
+	}
+
+	.top-nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		max-width: $appWidth;
+		padding: ($baseSpacing * 10px) 0 ($baseSpacing * 5px) 0;
+        margin: 0 auto;        
+	}
+
+	.logo {
+		text-decoration: none;
+		color: $brand-primary;		
+		font-size: $textBig;
+		font-weight: bold;
+	}
+
+	.nav {
+		margin: 0 0 0 auto;		
+		display: flex;		
+
+		.link {			
+			position: relative;	
+			margin: 0 0 0 ($baseSpacing*5px);
+			padding: 12px 0;
+			text-decoration: none;
+			color: $brand-primary;
+			display: flex;
+            align-items: center;
+            
+            &.active {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: $navLinkHeight;
+                    width: 100%;
+                    background-color: $brand-primary;
+                    transform: scaleX(1);
+                }
+            }
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: $navLinkHeight;
+				width: 100%;
+				background-color: $brand-primary;
+				transform: scaleX(0);
+				transition: transform 0.2s ease;
+			}
+
+			&:hover {
+				&::after {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+	
+	.container {	
+		max-width: $containerWidth;	
+        margin: auto;    
+	}
+
+	.hero {
+        padding: ($baseSpacing * 10) *1px 0;
+
+		.heading {
+            margin: 0 auto ($baseSpacing*4px) 0;
+            max-width: 480px;
+			text-align: left;
+			font-size: $textBiggest;
+		}
+
+		.description {
+			position: relative;
+			max-width: 480px;
+			line-height: 1.4;
+		}
+	}
+
+	.content {
+		display: block;
+        margin: ($baseSpacing * 12px) auto;
+		width: $contentWidth;
+		padding: ($baseSpacing * 9px);
+    }
+    
+    .footer {
+        color: $text-color-dark;
+        background-color: $layout-footer-background-color;
+        border-top: 2px solid $brand-primary;
+        padding: ($baseSpacing * 8px);
+        text-align: center;
+    }
+}
+
+/* pages */

@@ -1,0 +1,13 @@
+// 1. Your custom variables and variable overwrites.
+$global-link-color: $brand-primary;
+$global-emphasis-color: $brand-light;
+
+// 2. Import default variables and available mixins.
+@import "UIkit/variables-theme.scss";
+@import "UIkit/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "UIkit/uikit-theme.scss";
