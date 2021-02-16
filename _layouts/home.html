@@ -3,70 +3,59 @@
 
 <body>
 	<div class="app home">
-		<div class="top-bar">
-            <header class="top-nav">
-                <a href="/" class="logo"><img src="/assets/images/ydata-logo.svg" alt="logo"></a>
-                <nav class="nav">
-                    <a href="/" class="link active"><span class="label">Item 1</span></a>
-                    <a href="/example-page.html" class="link"><span class="label">Item 2</span></a>
-                    <a href="/example-page.html" class="link"><span class="label">Item 3</span></a>
-                </nav>
-            </header>
-        </div>
+		
+		{% include header.html %}
 
-		<div class="uk-container uk-margin">
-			<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="#" uk-img>
-				<h1>Background Image</h1>
-			</div>
-		</div>
+		<div class="container">
+			<div class="uk-container uk-margin">
+				<div class="hero">
+					<div class="content main">
+						<h1 class="heading">Welcome to<br>YData's Community </h1>
+						<p>The process of building datasets is now much faster and cheaper with automated preprocessing, labelling and synthetic data generation.</p>
+						<button class="button uk-button-primary">Join us on Github</button>
+						<span id="star-counter" class="star-counter">0</span>
+						<p><span class="note">We're open source. Get involved!</span></p>
+					</div>
+					<div class="content lesser">
 
-		<div class="uk-container">
-			<h1 class="uk-heading-small">My Heading</h1>
-		</div>
-
-		<div class="uk-container uk-margin-medium">
-			<div class="uk-child-width-expand@s uk-text-center uk-grid" uk-grid>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body uk-height-medium uk-flex uk-flex-middle uk-flex-center">Item</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body uk-height-medium uk-flex uk-flex-middle uk-flex-center">Item</div>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="uk-container">
-			<h1 class="uk-text-large">My Heading</h1>
-		</div>
-
-		<div class="uk-container uk-margin-medium">
-			<div class="uk-child-width-expand@s uk-text-center uk-grid-small" uk-grid>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">Item</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">Item</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">Item</div>
+		<div class="banner">
+			<div class="container">
+				<div class="uk-container">
+					<h2 class="heading">Key Features</h2>
 				</div>
 			</div>
-		</div>
-
-		<div class="uk-container">
-			<h1 class="uk-text-large">My Heading</h1>
-		</div>
-
-		<div class="uk-container uk-margin-medium">
-			<div class="uk-child-width-expand@s uk-text-center uk-grid-small" uk-grid>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">Item</div>
+			<div class="container">
+				<div class="uk-container uk-margin-medium">
+					<div class="uk-child-width-expand@s uk-grid" uk-grid>
+						<div class="content-block">
+							<h3 class="sub-heading">Faster access to sensitive data</h3>
+							<p>Data Synthesization allows data scientists to have faster access to data that used to require a full privacy compliance process only for accessing it.</p>
+							<p>Optimize the allocation of your resources and teams.</p>
+							<p>Your data scientists time will be invested in the faster and better development of models that are crucial for the business.</p>
+						</div>
+						<div class="content-block">
+							<div class="uk-card uk-card-default uk-card-body uk-height-medium uk-flex uk-flex-middle uk-flex-center"></div>
+						</div>
+					</div>
 				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">Item</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">Item</div>
+			</div>
+			<div class="container">
+				<div class="uk-container uk-margin-medium">
+					<div class="uk-child-width-expand@s uk-grid" uk-grid>
+						<div class="content-block">
+							<div class="uk-card uk-card-default uk-card-body uk-height-medium uk-flex uk-flex-middle uk-flex-center"></div>
+						</div>
+						<div class="content-block">
+							<h3 class="sub-heading">Improve your return on investment</h3>
+							<p>Data Synthesization allows data scientists to have faster access to data that used to require a full privacy compliance process only for accessing it.</p>
+							<p>Optimize the allocation of your resources and teams.</p>
+							<p>Your data scientists time will be invested in the faster and better development of models that are crucial for the business.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,8 @@
 // 1. Your custom variables and variable overwrites.
+$global-font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
 $global-link-color: $brand-primary;
-$global-emphasis-color: $brand-light;
+$global-emphasis-color: $brand-dark;
+$global-primary-background: $brand-primary;
 
 // 2. Import default variables and available mixins.
 @import "UIkit/variables-theme.scss";
