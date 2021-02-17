@@ -1,11 +1,7 @@
-$brand-primary: #E32212;
-$brand-dark: #040404;
-$brand-light: #FFFFFF;
-
-$greyscale-darkest: #474747;
-$greyscale-darkest: #7A7A7A;
-$greyscale-darkest: #B8B8B8;
-$greyscale-darkest: #F5F5F5;
+$greyscale-darkest: #1c1d21;
+$greyscale-dark: #7A7A7A;
+$greyscale-light: #b8bbc7;
+$greyscale-lightest: #f8f8f8;
 
 $functional-success: #5FED5C;
 $functional-warning: #FFEA2D;
@@ -15,5 +11,9 @@ $functional-highlight: #1298E3;
 $text-dark: #202124;
 $text-base: #202124;
 $text-light: #B8B8B8;
+
+$brand-primary: $greyscale-darkest;
+$brand-dark: #040404;
+$brand-light: #FFFFFF;
 
 $icons: #202124;

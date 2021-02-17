@@ -1,15 +1,16 @@
 // Color Assignments
-$layout-app-background-color: $brand-dark;
-$layout-footer-background-color: $brand-light;
+$layout-app-background-color: $brand-light;
+$layout-header-background-color: $brand-light;
+$layout-footer-background-color: $brand-primary;
+$banner-background-color: $greyscale-lightest;
 
 $text-color-primary: $brand-primary;
 $text-color-dark: $brand-dark;
-$text-color: $brand-light;
+$text-color: $brand-dark;
 $text-color-light: $text-light;
 
 // App
 $appWidth: 1200px;
-$contentWidth: 960px;
 
 // Spacings
 $baseSpacing: 6;
@@ -41,34 +42,66 @@ html {
 
 body {
 	color: $text-color;
-	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
 // native elements
 
 p {
-    line-height: 1.4;
+    line-height: 1.6;
 }
-
-$containerWidth: 1200px;
 
 // Layout
 
 .app {
 	position: relative;
 	height: 100%;
-
+    padding-top: 154px;
     
     .heading {
-        font-size: $textBiggest;
-        font-weight: bold;
         margin: 0 0 ($baseSpacing * 3px) 0;
+        text-align: center;
+        font-size: 42px;
+        color: $text-color;
 	}
 
+    .sub-heading {
+        font-weight: bold;
+        color: $text-color;
+    }
+
 	.top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        background-color: $brand-dark;        
+        background-color: $layout-header-background-color;
+        z-index: 999;
+        border-bottom: 2px solid $greyscale-darkest;
 	}
+
+    .top-cta {
+        position: fixed;
+        z-index: 999;
+        top: 162px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: ($baseSpacing * 2px); 
+        background-color: $brand-primary;
+        text-align: center;
+        
+        .link {
+            color: $brand-light;
+            text-decoration: underline;
+        }
+
+        p {
+            margin: auto;
+            color: $brand-light;
+        }
+    }
 
 	.top-nav {
 		position: relative;
@@ -76,11 +109,12 @@ $containerWidth: 1200px;
 		align-items: center;
 		height: 100%;
 		max-width: $appWidth;
-		padding: ($baseSpacing * 10px) 0 ($baseSpacing * 5px) 0;
-        margin: 0 auto;        
+        margin: 0 auto; 
+		padding: ($baseSpacing * 5px) 40px;        
 	}
 
 	.logo {
+        width: 100px;
 		text-decoration: none;
 		color: $brand-primary;		
 		font-size: $textBig;
@@ -88,7 +122,7 @@ $containerWidth: 1200px;
 	}
 
 	.nav {
-		margin: 0 0 0 auto;		
+		margin: 55px 0 0 auto;		
 		display: flex;		
 
 		.link {			
@@ -96,7 +130,7 @@ $containerWidth: 1200px;
 			margin: 0 0 0 ($baseSpacing*5px);
 			padding: 12px 0;
 			text-decoration: none;
-			color: $brand-primary;
+			color: $text-dark;
 			display: flex;
             align-items: center;
             
@@ -134,18 +168,31 @@ $containerWidth: 1200px;
 	}
 	
 	.container {	
-		max-width: $containerWidth;	
+		max-width: $appWidth;
         margin: auto;    
 	}
 
 	.hero {
-        padding: ($baseSpacing * 10) *1px 0;
+        margin-top: 49px;
+        padding: ($baseSpacing * 6px) 0;
+        
+        .content {
+            display: inline-block;
+            width: 50%;
+
+            &.main {
+                width: 60%;
+            }
+
+            &.lesser {
+                width: 40%;
+            }
+        }
 
 		.heading {
-            margin: 0 auto ($baseSpacing*4px) 0;
-            max-width: 480px;
+            color: $greyscale-darkest;
 			text-align: left;
-			font-size: $textBiggest;
+			font-size: 48px;
 		}
 
 		.description {
@@ -153,21 +200,97 @@ $containerWidth: 1200px;
 			max-width: 480px;
 			line-height: 1.4;
 		}
+
+        .button {
+            margin-right: ($baseSpacing * 3px);
+        }
 	}
 
-	.content {
-		display: block;
-        margin: ($baseSpacing * 12px) auto;
-		width: $contentWidth;
-		padding: ($baseSpacing * 9px);
+    .content-block {
+        margin: 40px 0;
     }
-    
+
     .footer {
-        color: $text-color-dark;
         background-color: $layout-footer-background-color;
-        border-top: 2px solid $brand-primary;
+        border-top: 2px solid $greyscale-darkest;
         padding: ($baseSpacing * 8px);
         text-align: center;
+
+        .heading {
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            color: $brand-light;
+        }
+
+        .link {
+            display: block;
+            margin: ($baseSpacing * 3px) 0;
+            text-align: left;
+            color: $brand-light;
+        }
+    }
+}
+
+/* components */
+
+.button {
+    padding: ($baseSpacing * 3px) ($baseSpacing * 4px);
+    font-size: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.note {
+    display: inline-block;
+    width: auto;
+    padding: ($baseSpacing * 1px) ($baseSpacing * 2px);
+    background-color: $brand-light;
+    border: 2px solid $brand-primary;
+    border-radius: 4px;
+}
+
+.star-counter {
+    position: relative;
+    background-color: $brand-light;
+    padding: ($baseSpacing * 1px) ($baseSpacing * 2px) ($baseSpacing * 1px) ($baseSpacing * 6px);
+    border-radius: 2px;
+    border: 2px solid $brand-primary;
+    color: $brand-primary;
+    cursor: pointer;
+
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    &::before {
+        content: "\2605";
+        top: 4px;
+        left: ($baseSpacing * 1px);
+    }
+
+    &::after {
+        top: 50%;
+        left: -5px;
+        z-index: -1;
+        margin-top: -5px;
+        border-width: 5px 5px 5px 0;
+        border-right-color: $brand-primary;
+    }   
+}
+
+.banner {
+    padding: 80px 0;
+    background-color: $banner-background-color;
+
+    .heading {
+        margin-bottom: 70px;
     }
 }
 
