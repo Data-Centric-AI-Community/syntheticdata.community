@@ -1,6 +1,5 @@
 window.onload = function () {
-	console.log('app loaded');
-    const env = 'dev';
+    const env = 'prod';
     const dom = document;
     const repoStarsEndpoint = 'https://api.github.com/repos/ydataai/ydata-synthetic';
     const starCounter = dom.getElementById('star-counter');
