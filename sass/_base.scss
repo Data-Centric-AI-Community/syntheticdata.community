@@ -51,6 +51,14 @@ p {
     line-height: 1.6;
 }
 
+.code {
+    display: inline-block;
+    margin: auto;
+    padding: ($baseSpacing * 3px);
+    background-color: $greyscale-darkest;
+    border-radius: 4px;
+}
+
 // Layout
 
 .app {
@@ -77,14 +85,9 @@ p {
         width: 100%;
         background-color: $layout-header-background-color;
         z-index: 999;
-        border-bottom: 2px solid $greyscale-darkest;
 	}
 
     .top-cta {
-        position: fixed;
-        z-index: 999;
-        top: 162px;
-        left: 0;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -173,7 +176,7 @@ p {
 	}
 
 	.hero {
-        margin-top: 49px;
+        margin-top: 80px;
         padding: ($baseSpacing * 6px) 0;
         
         .content {
@@ -202,6 +205,7 @@ p {
 		}
 
         .button {
+            display: inline-block;
             margin-right: ($baseSpacing * 3px);
         }
 	}
@@ -210,9 +214,13 @@ p {
         margin: 40px 0;
     }
 
+    .code-block {
+        display: block;
+        text-align: center;
+    }
+
     .footer {
         background-color: $layout-footer-background-color;
-        border-top: 2px solid $greyscale-darkest;
         padding: ($baseSpacing * 8px);
         text-align: center;
 
@@ -228,6 +236,12 @@ p {
             margin: ($baseSpacing * 3px) 0;
             text-align: left;
             color: $brand-light;
+            font-size: 14px;
+        }
+
+        .logo {
+            display: block;
+            width: 200px;
         }
     }
 }
@@ -237,8 +251,13 @@ p {
 .button {
     padding: ($baseSpacing * 3px) ($baseSpacing * 4px);
     font-size: 18px;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
+
+    img {
+        width: 30px;
+        margin-left: ($baseSpacing * 2px);
+    }
 }
 
 .note {
@@ -288,10 +307,6 @@ p {
 .banner {
     padding: 80px 0;
     background-color: $banner-background-color;
-
-    .heading {
-        margin-bottom: 70px;
-    }
 }
 
 /* pages */
