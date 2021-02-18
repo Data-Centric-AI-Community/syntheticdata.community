@@ -6,20 +6,25 @@
 		
 		{% include header.html %}
 
-		<div class="container">
+		<section class="container">
 			<div class="uk-container uk-margin">
 				<div class="hero">
 					<div class="uk-width-xlarge@s">
 						<h1 class="heading">Welcome to<br>Synthetic Data's Community </h1>
 						<p>Essential to the data science toolkit, synthetic data can help teams to deal with problems from small and imbalance data, bias and privacy.</p>
 						<a href="https://github.com/ydataai/ydata-synthetic" target="_blank" class="button uk-button-primary">Join us on <img src="./assets/images/github.png" alt="Github"></a>
-						<span id="star-counter" class="star-counter">0</span>
+						<a href="https://github.com/ydataai/ydata-synthetic/stargazers/" target="_blank"><span id="star-counter" class="star-counter">0</span></a>
+                        <div class="tools">
+                            <a href="https://www.jupyter.org/" target="_blank"><img src="./assets/images/jupyterlab.png" alt="Jupyter Lab" class="logo jupyterlab"></a>                            
+                            <a href="https://www.python.org/" target="_blank"><img src="./assets/images/python.png" alt="Python" class="logo python"></a>
+                            <a href="https://www.tensorflow.org/" target="_blank"><img src="./assets/images/tensorflow.png" alt="Tensoerflow" class="logo tensorflow"></a>                            
+                        </div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<div class="banner">
-			<div class="container">
+			<section class="container">
 				<div class="uk-container">
 					<h2 class="heading">Start using synthetic data today!</h2>
                     <div class="uk-container">
@@ -30,35 +35,35 @@
                         </div>
                     </div>
 				</div>
-			</div>
-			<div class="container">
+			</section>
+			<section class="container">
 				<div class="uk-container uk-margin-medium">
 					<div class="uk-child-width-expand@s uk-grid" uk-grid>
-						<div class="content-block">
+						<article class="content-block">
 							<h3 class="sub-heading">Tabular data</h3>
 							<p>Learn how to generate synthetic tabular data while leveraging the GAN-based model from the research to generate high-fidelity synthetic data in a data driven-approach.</p>
 							<p>You can find Tensorflow 2 implementations for some of the major architectures such as: Vanilla GAN, WGAN or WCGAN.</p>
-						</div>
+						</article>
 						<div class="content-block">
 							<div class="uk-card uk-card-default uk-card-body uk-height-medium uk-flex uk-flex-middle uk-flex-center"></div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="container">
+			</section>
+			<section class="container">
 				<div class="uk-container uk-margin-medium">
 					<div class="uk-child-width-expand@s uk-grid" uk-grid>
-                        <div class="content-block">
+                        <article class="content-block">
 							<h3 class="sub-heading">Time-series data</h3>
 							<p>Sequential data can be found pretty much anywhere: from weather forecasted, exchange rates, to our mobility.</p>
 							<p>Learn how to capture dataset features distributions within each time-point with data-driven approaches such as:  TimeGAN, CGAN or RCGAN.</p></p>
-						</div>
+						</article>
 						<div class="content-block uk-flex-first@s">
 							<div class="uk-card uk-card-default uk-card-body uk-height-medium uk-flex uk-flex-middle uk-flex-center"></div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
 
 		{% include footer.html %}
