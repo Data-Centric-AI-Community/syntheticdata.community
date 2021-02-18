@@ -10192,6 +10192,22 @@ p {
     .app .hero .button {
       display: inline-block;
       margin-right: 18px; }
+  .app .tools {
+    display: flex;
+    align-items: center;
+    margin-top: 18px; }
+    .app .tools .logo {
+      margin-right: 12px; }
+    .app .tools .python {
+      max-width: 50px;
+      width: initial; }
+    .app .tools .jupyterlab {
+      max-width: 40px;
+      width: initial; }
+    .app .tools .tensorflow {
+      margin-left: -12px;
+      max-width: 130px;
+      width: initial; }
   .app .content-block {
     margin: 40px 0; }
   .app .code-block {
