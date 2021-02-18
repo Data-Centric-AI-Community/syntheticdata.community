@@ -210,29 +210,12 @@ p {
         }
 	}
 
-    .tools {
-        display: flex;
-        align-items: center;
-        margin-top: ($baseSpacing * 3px);
+    .badges {
+        margin-top: ($baseSpacing * 5px);
 
-        .logo {
+        .badge {
             margin-right: ($baseSpacing * 2px);
-        }
-
-        .python {
-            max-width: 50px;
-            width: initial;
-        }
-
-        .jupyterlab {
-            max-width: 40px;
-            width: initial;
-        }
-
-        .tensorflow {
-            margin-left: -($baseSpacing * 2px);
-            max-width: 130px;
-            width: initial;
+            height: 22px;
         }
     }
 
