@@ -10276,10 +10276,13 @@ p {
 
 /* pages */
 @media (max-width: 640px) {
+  .app .nav {
+    margin-top: 18px; }
   .app .top-nav {
     padding: 12px; }
   .app .logo {
-    width: 40px;
-    margin-top: 24px; }
+    width: 50px; }
+  .app .hero {
+    margin-top: 0px; }
   .app .footer .logo {
     width: 160px; } }
