@@ -328,13 +328,20 @@ p {
 @media (max-width: $breakpoint-small) {
     .app {
 
+        .nav {
+            margin-top: ($baseSpacing * 3px);
+        }
+
         .top-nav {
             padding: ($baseSpacing * 2px);
         }
 
         .logo {
-            width: 40px;
-            margin-top: ($baseSpacing * 4px);
+            width: 50px;
+        }
+
+        .hero {
+            margin-top: 0px;
         }
 
         .footer {
