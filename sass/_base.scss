@@ -214,6 +214,7 @@ p {
         margin-top: ($baseSpacing * 5px);
 
         .badge {
+            margin-top: ($baseSpacing * 2px);
             margin-right: ($baseSpacing * 2px);
             height: 22px;
         }
@@ -221,6 +222,10 @@ p {
 
     .content-block {
         margin: 40px 0;
+        
+        img {
+            border: 1px solid #f2f1f1;
+        }
     }
 
     .code-block {
