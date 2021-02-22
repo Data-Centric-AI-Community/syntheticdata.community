@@ -10195,10 +10195,13 @@ p {
   .app .badges {
     margin-top: 30px; }
     .app .badges .badge {
+      margin-top: 12px;
       margin-right: 12px;
       height: 22px; }
   .app .content-block {
     margin: 40px 0; }
+    .app .content-block img {
+      border: 1px solid #f2f1f1; }
   .app .code-block {
     display: block;
     text-align: center; }
@@ -10272,3 +10275,10 @@ p {
   background-color: #f8f8f8; }
 
 /* pages */
+@media (max-width: 640px) {
+  .app .top-nav {
+    padding: 12px; }
+  .app .logo {
+    width: 80px; }
+  .app .footer .logo {
+    width: 160px; } }
