@@ -10272,3 +10272,10 @@ p {
   background-color: #f8f8f8; }
 
 /* pages */
+@media (max-width: 640px) {
+  .app .top-nav {
+    padding: 12px; }
+  .app .logo {
+    width: 80px; }
+  .app .footer .logo {
+    width: 160px; } }
