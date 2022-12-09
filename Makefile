@@ -13,6 +13,9 @@ endif
 start:		### Start Server
 	bundle exec jekyll serve
 
+start-dev:  ### Start Server Dev
+	bundle exec jekyll serve --open-url --livereload
+
 install:	### Install ruby dependencies
 	bundle install
 	npm install -g sass
